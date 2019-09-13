@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+:root{
+    /* Fonts */
+    --primary-font: 'Roboto', sans-serif;
+
+    /* Colors */
+    --background: #30394B;
+    --work:  #F55151;
+    --long-break: ;
+    --short-break: #07E98B;
+    --accents: #F8F6F3;
+    --little-details: #E3E1DE;
+    --app-width: 250px;
+}
+html {
+    background-color: #000000;
+}
+
+.wrapper {
+    width: var(--app-width);
+    height: 350px;
+    background-color: var(--background);
+    padding: 5px 5px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header__nav svg {
+    stroke: var(--accents);
+}
+
+.header__nav::after {
+    content: "";
+    display: block;
+    width: 30px;
+}
+
+.header__promo {
+    color: var(--short-break);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500
+}
+
+.main__clock {
+    display: grid;
+    grid-template-columns: var(--app-width);
+    grid-template-rows: 25% 100px;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgba(227, 225, 222, 0.178);
+}
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
