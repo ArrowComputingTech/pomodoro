@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="./assets/css/main.css">
     </head>
     <body>
+
+            <!-- !!! HTML
+            1. fix structure
+            2. menu 
+        -->
+        
         <div class="wrapper">
             <header class="header">
                 <nav class="header__nav">
@@ -23,21 +29,26 @@
                 </nav>
             </header>
 
-            <main class="main"> 
-                <div class="main__clock">
-                    <div class="clock__time">%25:00%</div>
-                    <div class="clock__text">%Short Break%</div>
+            <main class="main">
+                <div class="main__circle">                    
+                    <svg class="progress-ring" height="120" width="120">
+                        <circle class="progress-ring__circle" stroke=white stroke-width="1" fill="transparent" r="58" cx="60" cy="60"/>
+                    </svg>    
+                    <div class="main__clock">
+                        <div class="clock__time"><span class="clock__pad">25</span>: 00</div>
+                        <div class="clock__text">%Short Break%</div>
+                    </div>
                 </div>
-
+                
                 <div class="main__pause">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"/></svg>
+                    <svg id='main_pause' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"/></svg>
                 </div>
             </main>
 
             <footer class="footer">
                 <div class="footer__round-details">
                     <div class="round-details__rounds">%1/4%</div>
-                    <div class="round-details__text">Reset</div>
+                    <div class="round-details__reset">Reset</div>
                 </div>
 
                 <div class="sounds">
@@ -47,7 +58,39 @@
             </footer>
         </div>
 
+        <main class='main__options'>
+        <header class="header">
+                <nav class="header__nav">
+                    <!-- Menu bar TODO -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        <line x1="3" y1="12" x2="13" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                    </svg>
+                    <a class="header__promo"href="">Pomotroid</a>
+                </nav>
+            </header>
+			
+            <label for="work">Work</label>
+            <p><span>%25%</span>00</p>
+            <input type="range" id="work" step="5" min="0" max="60">
+
+            <label for="short_break">Short Break</label>
+            <p><span>%5%</span>00</p>
+            <input type="range" id="short_break" step="1" min="0" max="15">
+        
+            <label for="long_break">Long Break</label>
+            <p><span>%15%</span>00</p>
+            <input type="range" id="long_break" step="5" min="0" max="60">
+        
+            <label for="work">Rounds</label>
+            <p><span>%25%</span>00</p>
+            <input type="range" id="work" step="1" min="1" max="10">
+            
+            <h3 class="option__restart">Restore Defaults</h3>
+		</main>
+
         <!-- Scripts -->
         <script src="./assets/scripts/main.js"></script>
+        <script src='./assets/scripts/options.js'></script>
     </body>
 </html>
