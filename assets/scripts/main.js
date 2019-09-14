@@ -41,40 +41,4 @@ function timerFunction() {
     
 }
 
-
-// for later
-function rounds() {
-    /*
-        if work time is equal 00 then
-        increment the 1 from 1/4 
-            if round is equal to 4/4 then reset the top number to 1
-    */
-}
-
-function longBreak() {
-    /*
-        
-    */
-}
-
-function shortBreak() {
-    
-}
-
-function skip() {
-    /*
-        create a variable called short_breaks and set it equal to 0
-        if skip button is pressed then increment short_break += 1
-        once short_break equals 4 then call the long break function
-     */
-}
-
-function sounds() {
-    /*
-        Create an object for 3 songs
-        use Math.random to select a random song
-    
-    */
-}
-
 document.getElementById('main_pause').addEventListener('click', playClick);
