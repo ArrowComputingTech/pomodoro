@@ -1,15 +1,3 @@
-// !!! JS
-/*
-    0. when play button is pressed then do stuff
-    Default style for counter = work option
-    1. Get option page options (variables)
-    2. round donut needs to change colors corresponding with current option, red = work, short break = gree, long break = blue
-    3. round numbers 1/4 needs to increment by 1 everytime we hit 00:00 (work)
-    4. sound files
-    5. volume control:https://www.w3schools.com/tags/av_prop_volume.asp    
-    6. setInterval
-*/
-
 // Get values for timer circle
 const circle = document.querySelector('.progress-ring__circle');
 const radius = circle.r.baseVal.value;
@@ -36,10 +24,6 @@ let count_seconds = setInterval(function() {
 });
 */
 
-https://www.w3schools.com/howto/howto_js_countdown.asp
-
-https://awwapp.com/b/uak6mtllt/
-
 function playClick() {
     console.log('Pause Button');
     /* 
@@ -50,7 +34,7 @@ function playClick() {
     let minutes_counter = work_time;
     
     
-    setProgress(Math.max(work)/360 * (parseFloat(finish_time/start)));
+    setProgress(Math.max(work)/360 * (parseFloat(finish_time / start)));
 }
 
 function timerFunction() {
