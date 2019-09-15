@@ -13,6 +13,7 @@ function setDate() {
     SECONDHAND.style.transform = `rotate(${SECONDSDEGREES}deg)`;
     MINUTEHAND.style.transform = `rotate(${MINUTESDEGREES}deg)`;
     HOURHAND.style.transform = `rotate(${HOURSDEGREES}deg)`;
+    
     if (SECONDS == 59) {
         secondscounter += 360;
     }

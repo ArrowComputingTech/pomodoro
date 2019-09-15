@@ -132,7 +132,7 @@
 @keyframes countdown {
     to {
         stroke-dashoffset: 0;
-    } /* 525 is the beginning of the circle*/
+    } /* 540 is the beginning of the circle*/
 } /* 0 is a full circle*/
 
 /*************************

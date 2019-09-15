@@ -3,7 +3,7 @@
 2. menu 
 
 ## CSS
-3. 360 / max time
+1. 
 
 ## JAVASCRIPT
 0. when play button is pressed then do stuff Default style for counter = work option
@@ -15,6 +15,7 @@
 6. setInterval
 
 ## Links
+
 # CSS Grid
 https://css-tricks.com/snippets/css/complete-guide-grid/
 
