@@ -7,7 +7,7 @@
 
 :root{
     /* Fonts */
-    --primary-font: 'Roboto', sans-serif;
+    --primary-font: 'Quicksand', sans-serif;
 
     /* Colors */
     --background: #30394B;
@@ -16,15 +16,16 @@
     --short-break: #07E98B;
     --accents: #F8F6F3;
     --little-details: #E3E1DE;
+    --faded-ring: hsla(36, 8%, 88%, 0.178);
 
     /* App */
-    --app-width: 250px;
+    --app-width: 260px;
     --app-height: 350px;
 }
 
-html {
+/* html {
     background-color: #000000;
-}
+} */
 
 /*************************
     Basic Styles
@@ -34,13 +35,15 @@ html {
     width: var(--app-width);
     height: var(--app-height);
     background-color: var(--background);
-    padding: 5px 5px;
+    padding: 8px 4px 2px 4px;
+    margin: 5% auto;
+    border: 1px solid rgb(32, 32, 32);
+    box-shadow: 0 2px 30px rgba(165, 165, 165, 0.411);
 }
 
 /*************************
     Nav Styles
 **************************/
-
 .header__nav {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -48,26 +51,20 @@ html {
 
 .header__nav svg {
     stroke: var(--accents);
+    cursor: pointer;
 }
-
-/* .header__nav::after {
-    content: "";
-    display: block;
-    width: 30px;
-} */
 
 .header__promo {
     color: var(--short-break);
     text-decoration: none;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 700;
     justify-self: center;
 }
 
 /*************************
     Clock Styles
 **************************/
-
 .main {
     display: flex;
     align-items: center;
@@ -76,43 +73,67 @@ html {
 }
 
 .main__circle {
-    
+    border: 2px solid var(--faded-ring);
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    position: relative;
 }
 
-.progress-ring__circle {
-    border-style: dashed;
-    stroke-dasharray:  20;
-    transition: stroke-dashoffset 0.35s;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-}
-
-.main__clock {
-    color: white;
-    display: grid;
-    margin-top: 33%;
-    grid-template-rows: auto auto;
-    text-align: center;
+.circle__details {
+    width: 100%;
+    height: 28vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .clock__time {
-    font-size: 30px;
-    position: absolute;
-    top: 40px;
-}
-.clock__text {
-    padding-top: 15px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 40px;
     color: var(--little-details);
-    text-transform: uppercase;
-    position: absolute;
-    top: 60px;
+    letter-spacing: .2rem;
 }
 
-.clock__pad {
-    padding-right: 5px;
+.clock__text {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--little-details);
+    text-transform: uppercase;
 }
+
+.main__circle svg {
+    transform: rotate(270deg);
+    overflow: visible;
+    position: absolute;
+    bottom: 1px;
+}
+
+.circle_animation {
+    stroke-dasharray: 540; /* this value is the pixel circumference of the circle */
+    stroke-dashoffset: 540;
+}
+
+/* 
+    Converting Minutes to Seconds 
+    Multiply the number of minutes by 60.
+        Ex. 1. 25 Minutes * 60 = 1500s
+            2. 15 Minutes * 60 = 900s
+            3. 5 Minutes * 60 = 300s
+ */
+.circle_animation {
+    animation: countdown 1500s linear forwards;
+    /* 25 minutes is 1500s */
+    /* 15 mintues is 900s */
+    /* 5 minutes is 300s */
+}
+
+@keyframes countdown {
+    to {
+        stroke-dashoffset: 0;
+    } /* 525 is the beginning of the circle*/
+} /* 0 is a full circle*/
 
 /*************************
     Puase Play Styles
@@ -120,26 +141,28 @@ html {
 .main__pause {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    border: 1px solid rgba(227, 225, 222, 0.178);
+    margin-top: 15px;
+    border: 2px solid var(--faded-ring);
     border-radius: 50%;
     padding: 8px;
 }
 
 .main__pause svg {
-    fill: #fff;
-}
-
-.ring {
-
+    stroke: #fff;
+    cursor: pointer;
 }
 
 /*************************
     Footer Styles
 **************************/
-/* can you hear me? You have to click on LIVE SHARE and audio call participants */
 .footer {
     margin: 0px 5px 0px 5px;
+}
+
+.footer::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .footer__round-details {
@@ -150,15 +173,23 @@ html {
     Round Details Styles
 **************************/
 .round-details__rounds {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     color: var(--accents);
+    text-align: center;
 }
 
 .round-details__reset {
-    font-size: 14px;
     color: rgb(131, 131, 131);
     text-align: center;
+    font-size: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.round-details__reset:hover {
+    opacity: .5;
 }
 
 /*************************
@@ -167,43 +198,25 @@ html {
 .sounds {
     float: right;
     fill: rgba(227, 225, 222, 0.664); 
+    line-height: 2.5
 }
 
 .sounds svg {
     height: 15px;
+    cursor: pointer;
 }
 
-/*************************
-    Options Styles
-**************************/
-.main__options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: var(--app-width);
-    height: var(--app-height);
-    background-color: var(--background);
+.sounds svg:hover {
+    opacity: .5
 }
 
-.main__options label + p {
-    color: rgba(227, 225, 222, 0.664); 
-    font-size: 10px;
-    margin: 10px 0; 
+.sounds svg:first-child {
+    width: 12px;
+
 }
 
-.main__options label {
-    font-size: 12px;
-    color: var(--accents);
+.sounds svg:last-child {
+    width: 14px;
+    margin-left: 5px;
 }
-
-.main__options input {
-    margin-bottom: 10px;
-}
-
-.main__options h3 {
-    font-size: 11px;
-    color: rgba(227, 225, 222, 0.356);
-    font-weight: 700;
-}
-
 

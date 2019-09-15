@@ -32,3 +32,11 @@ https://www.w3schools.com/howto/howto_js_countdown.asp
 
 # Online white board to share ideas
 https://awwapp.com/b/uak6mtllt/
+
+
+# Learning about SVG (Watch in order)
+1. https://www.youtube.com/watch?v=ZJSCl6XEdP8
+2. https://www.youtube.com/watch?v=9Y4P3FvZ5bg
+3. https://www.youtube.com/watch?v=TBYJ2V1jAlA
+4. https://www.youtube.com/watch?v=cWh0de8IhX4
+5. https://www.youtube.com/watch?v=4XJ8yS0zpa4
