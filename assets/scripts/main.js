@@ -58,22 +58,8 @@ Table of Contents
 /*********************** 
 Pause and Play Alternate
 ************************/
-const playFunctions = {
-    play: 'assets/images/play.svg',
-    pause: 'assets/images/pause.svg'
-}
-
-// const play = document.getElementById('p');
 const playButton = document.getElementById('play_button');
 const pauseButton = document.getElementById('pause_button');
-
-// function switchImage() {
-//     if (play.src.endsWith(playFunctions.pause)) {
-//         play.src = playFunctions.play;
-//     } else {
-//         play.src = playFunctions.pause;
-//     }
-// }
 
 function play() {
     playButton.style.display = 'none';
@@ -90,35 +76,31 @@ function pause() {
 /*********************** 
     Event Listeners
 ************************/
-// play.addEventListener('click', switchImage)
 playButton.addEventListener('click', play)
 pauseButton.addEventListener('click', pause)
-
-
-    /*
-    let i = 0
-        an object {
-            img1: './assets/images/play.svg',
-            img2: './assets/images/pause.svg'
-
-        }
-        i += 1
-        i -= 1 
-     */
-
-
-// function switchThis(type) {
-//     return play.src = type;
-// }
-
-// function foo() {
-
-// }
-
-// switchThis(playImages[image1]);
 
 
 
 
 
 // http://jsfiddle.net/cCvtL/1/
+
+let menu = document.querySelector(".menu")
+let sideMenu = document.querySelector(".main__options")
+let trigger = "enabled"
+
+function slide() {
+
+    if (trigger === "disabled") {
+        sideMenu.style.setProperty("right", "100%")
+        trigger = "enabled";
+    } else if (trigger === "enabled") {
+        sideMenu.style.setProperty("right", "0"
+        trigger = "disabled";
+    }
+
+}
+
+menu.addEventListener("click", slide)
+
+
