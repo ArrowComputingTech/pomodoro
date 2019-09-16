@@ -50,15 +50,75 @@
 /*
 Table of Contents
     1. Pause and Play alternate
-        - 
+    2. Slide Menu
 
+    SOMENUMBER. Event Listeners
 */
 
-const play = querySelector('main__pause svg');
+/*********************** 
+Pause and Play Alternate
+************************/
+const playFunctions = {
+    play: 'assets/images/play.svg',
+    pause: 'assets/images/pause.svg'
+}
 
-play.addEventListener('click', (event) => {
-    
-});
+// const play = document.getElementById('p');
+const playButton = document.getElementById('play_button');
+const pauseButton = document.getElementById('pause_button');
+
+// function switchImage() {
+//     if (play.src.endsWith(playFunctions.pause)) {
+//         play.src = playFunctions.play;
+//     } else {
+//         play.src = playFunctions.pause;
+//     }
+// }
+
+function play() {
+    playButton.style.display = 'none';
+    pauseButton.style.display = 'block';
+}
+
+function pause() {
+    playButton.style.display = 'block';
+    pauseButton.style.display = 'none';
+}
 
 
 
+/*********************** 
+    Event Listeners
+************************/
+// play.addEventListener('click', switchImage)
+playButton.addEventListener('click', play)
+pauseButton.addEventListener('click', pause)
+
+
+    /*
+    let i = 0
+        an object {
+            img1: './assets/images/play.svg',
+            img2: './assets/images/pause.svg'
+
+        }
+        i += 1
+        i -= 1 
+     */
+
+
+// function switchThis(type) {
+//     return play.src = type;
+// }
+
+// function foo() {
+
+// }
+
+// switchThis(playImages[image1]);
+
+
+
+
+
+// http://jsfiddle.net/cCvtL/1/
