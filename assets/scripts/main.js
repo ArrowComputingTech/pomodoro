@@ -1,4 +1,4 @@
-// all this code is useless now
+// all this code is useless now :(
 
 // // Get values for timer circle
 // const circle = document.querySelector('.progress-ring__circle');
@@ -44,3 +44,21 @@
 // }
 
 // document.getElementById('main_pause').addEventListener('click', playClick);
+
+// ^^ End useless code
+
+/*
+Table of Contents
+    1. Pause and Play alternate
+        - 
+
+*/
+
+const play = querySelector('main__pause svg');
+
+play.addEventListener('click', (event) => {
+    
+});
+
+
+
