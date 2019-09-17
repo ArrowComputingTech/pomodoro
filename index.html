@@ -43,7 +43,7 @@
                         <g><circle id="circle" class="circle_animation" r="85" cy="81" cx="81" stroke-width="8" stroke="#F55151" fill="none"/></g>
                     </svg>
                 </div>
-                
+
                 <div class="main__pause">
                         <!-- <img id="p" src="./assets/images/pause.svg" /> -->
                         <svg id="play_button" class="action_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M96 52v408l320-204L96 52z"/></svg>
@@ -67,35 +67,41 @@
 
         <!-- Settings page -->
         <main class='main__options'>
-        <header class="header">
-                <nav class="header__nav">
+            <header class="header__settings">
+                <nav class="header__settings__nav">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
                         <line x1="3" y1="12" x2="13" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                     </svg>
                     <a class="header__promo" href="#">Pomotroid</a>
+                    <a href='https://github.com/anthonygedeon/pomodoro'><h3 class='team_title'>Courtesy the JASM crew!</h3></a>
                 </nav>
             </header>
-			
-            <label for="work">Work</label>
-            <p><span>%25%</span>00</p>
-            <input type="range" id="work" step="5" min="0" max="60">
-
-            <label for="short_break">Short Break</label>
-            <p><span>%5%</span>00</p>
-            <input type="range" id="short_break" step="1" min="0" max="15">
-        
-            <label for="long_break">Long Break</label>
-            <p><span>%15%</span>00</p>
-            <input type="range" id="long_break" step="5" min="0" max="60">
-        
-            <label for="work">Rounds</label>
-            <p><span>%25%</span>00</p>
-            <input type="range" id="work" step="1" min="1" max="10">
             
-            <h3 class="option__restart">Restore Defaults</h3>
-        </main> 
-    
+            <div class="option__sliders">
+                <div class='option__slider_section'>
+                    <label for="work"  class='option__section'>Work</label>
+                    <p><span>%25%</span>00</p>
+                    <input type="range" id="work" step="5" min="0" max="60" />
+                </div>
+                <div class='option__slider_section'> 
+                    <label for="short_break" class='option__section'>Short Break</label>
+                    <p><span>%5%</span>00</p>
+                    <input type="range" id="short_break" step="1" min="0" max="15">
+                </div>
+                <div class='option__slider_section'>
+                    <label for="long_break" class='option__section'>Long Break</label>
+                   <p><span>%15%</span>00</p>
+                    <input type="range" id="long_break" step="5" min="0" max="60">
+                </div>
+                <div class='option__slider_section'>
+                    <label for="work" class='option__section'>Rounds</label>
+                    <p><span>%25%</span>00</p>
+                    <input type="range" id="work" step="1" min="1" max="10">
+                </div>
+                <h3 class="option__restart">Restore Defaults</h3>
+            </div>
+        </main>
 
         <!-- Scripts -->
         <script src="./assets/scripts/main.js"></script>

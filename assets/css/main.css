@@ -260,9 +260,3 @@ html {
     background-color: #fff;
 }
 
-/* MAIN */
-
-.main__options {
-    overflow: hidden;
-    position: absolute;    
-}
